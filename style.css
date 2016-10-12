@@ -1,0 +1,59 @@
+#ttt-container
+{
+	width: 414px;
+}
+
+.ttt-cell
+{
+	width: 138px;
+	height: 138px;
+/*	border: red thin solid; */
+	float: left;
+}
+
+#ttt-top-left
+{
+	background: url('img/empty.png');
+	background-position: 0px 0px;
+}
+#ttt-top-middle
+{
+	background: url('img/empty.png');
+	background-position: -138px 0px;
+}
+#ttt-top-right
+{
+	background: url('img/empty.png');
+	background-position: -276px 0px;
+}
+#ttt-middle-left
+{
+	background: url('img/empty.png');
+	background-position: 0px -138px;
+}
+#ttt-middle-middle
+{
+	background: url('img/empty.png');
+	background-position: -138px -138px;
+}
+#ttt-middle-right
+{
+	background: url('img/empty.png');
+	background-position: -276px -138px;
+}
+
+#ttt-bottom-left
+{
+	background: url('img/empty.png');
+	background-position: 0px -276px;
+}
+#ttt-bottom-middle
+{
+	background: url('img/empty.png');
+	background-position: -138px -276px;
+}
+#ttt-bottom-right
+{
+	background: url('img/empty.png');
+	background-position: -276px -276px;
+}
