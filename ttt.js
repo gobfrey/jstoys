@@ -10,11 +10,11 @@ $(document).ready(function(){
 			return;
 		}
 
-		var current_player = get_current_player(); //are we clicking X or O
+		var current_player = ttt_get_current_player(); //are we clicking X or O
 
-		set_cell_content(this, current_player); //set X or O on this cell
+		ttt_set_cell_content(this, current_player); //set X or O on this cell
 
-		var win_line = detect_win_line(current_player); //did the current player just win?
+		var win_line = ttt_detect_win_line(current_player); //did the current player just win?
 		if (win_line)
 		{
 			ttt_win(current_player, win_line); //update interface to reflect win
@@ -25,7 +25,7 @@ $(document).ready(function(){
 });
 
 //return the line class of a win for a nought or a cross player
-function detect_win_line(current_player)
+function ttt_detect_win_line(current_player)
 {
 	//check to see if anyone has won by checking all possible lines of 3
 	var win_lines = ['row-1','row-2','row-3','col-1','col-2','col-3','slash','backslash'];
@@ -46,7 +46,7 @@ function detect_win_line(current_player)
 }
 
 //Whose turn is it?
-function get_current_player()
+function ttt_get_current_player()
 {
 	//if there are an even number of empty cells, it's an O (let's take turns)
 	if( $('.blank').length % 2 == 0)
@@ -57,7 +57,7 @@ function get_current_player()
 }
 
 //set the background image of the cell, add nought or cross class, remove blank class
-function set_cell_content(cell, current_player)
+function ttt_set_cell_content(cell, current_player)
 {
 
 	//assume it's an X
@@ -91,6 +91,7 @@ function ttt_game_is_over()
 	return false;
 }
 
+//update the interface to reflect game over.
 function ttt_win(current_player, win_line_class)
 {
 	//make this the winning line
